@@ -1,9 +1,9 @@
-// const fs = require("fs");
-// fs.copyFileSync("text.txt","text2.txt");
-// console.log("Copy file success")
+const op = require("./module");
 
-const hero = require("superheroes");
+const moduleTitle = op.title;
+const moduleTambah = op.tambah(10,5);
+const modulePerkalian = op.kali(10,5);
 
-for (let i = 0; i < 10; i++) {
-  console.log(i+". "+hero.random());
-}
+console.log(moduleTitle);
+console.log("Tambah : "+moduleTambah);
+console.log("Perkalian : "+modulePerkalian);
