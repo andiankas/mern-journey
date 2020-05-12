@@ -5,8 +5,21 @@ const port = 3000
 app.set('views', './views') // specify the views directory
 app.set('view engine', 'ejs') // register the template engine
 
+// app.get('/', (req, res) => {
+//   res.render('index')
+// })
+
 app.get('/', (req, res) => {
-  res.render('index')
+  const buah = [
+    {name: 'apel'},
+    {name: 'semangka'},
+    {name: 'durian'}
+  ]
+  res.render('index',{
+    name: 'John Doe',
+    job: 'Frontend Developer',
+    buah: buah
+  })
 })
 app.get('/:name',(req,res) => res.send(`Nama saya : ${req.params.name}`))
 

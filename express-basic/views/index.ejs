@@ -7,9 +7,12 @@
 </head>
 <body>
 
-  <p>Name : Ankas</p>
-  <p>Yes i know</p>
-  <p>Haha</p>
+  <p>Name : <%= name %></p>
+  <p>Job  : <%= job %></p>
+  
+  <% for(let i=0;i<buah.length;i++){ %>
+    <p><%= buah[i].name %></p>
+  <% } %>
 
 </body>
 </html>
